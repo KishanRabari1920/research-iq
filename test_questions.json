@@ -1,0 +1,31 @@
+{
+  "answerable_by_rag": [
+    "What are the main challenges in designing soft robots for real-world tasks?",
+    "How do researchers approach sim-to-real transfer for legged robots?",
+    "What role do foundation models and LLMs play in robot manipulation?",
+    "How is Robot Operating System 2 (ROS 2) designed and used in the field?",
+    "What techniques exist for multi-robot motion planning and coordination?",
+    "How do robots use tactile sensing for manipulation tasks?",
+    "What are common approaches to human-robot collaboration in industrial settings?",
+    "How is reinforcement learning applied to robot skill acquisition?",
+    "What methods exist for building trust between humans and robots?",
+    "How do swarm robotics systems coordinate large numbers of simple robots?",
+    "What is the state of the art in aerial robot localization and navigation?",
+    "How are NeRFs (Neural Radiance Fields) being applied in robotics?",
+    "What approaches exist for robotic manipulation of deformable or elastoplastic materials?",
+    "How do quadruped and legged robots achieve dynamic locomotion?",
+    "What are the design considerations for surgical and medical robots?",
+    "How is Gemini Robotics advancing generalist embodied AI models?",
+    "What sensing methods are used for robot state estimation, such as Kalman filtering?",
+    "How do robots perform terrain-aware or rough-terrain navigation?",
+    "What are the applications of robots in agricultural settings like precision farming?",
+    "How do vision-language-action models scale with large real-world robot trajectory data?"
+  ],
+  "not_answerable_by_rag": [
+    "What is the best recipe for making butter vadapav?",
+    "What is the current inflation rate in India?",
+    "Who won the latest cricket World Cup final?",
+    "What are the visa requirements for studying in Canada?",
+    "How does photosynthesis work in plants?"
+  ]
+}

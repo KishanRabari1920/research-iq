@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Papers</title>
+    <link rel="stylesheet" href="db_style.css">
+</head>
+<body>
+    <button id="back-home" onclick="window.location.href='index.html'">&larr; Back to Home</button>
+    <h1>Saved Papers</h1>
+    <div id="papers"></div>
+
+    <script>
+        const BASE_URL = "http://127.0.0.1:8000";
+
+        async function loadPapers() {
+            try {
+                const res = await fetch(`${BASE_URL}/papers`);
+                const data = await res.json();
+
+                const papersDiv = document.getElementById("papers");
+                papersDiv.innerHTML = "";
+
+                if (!data.papers || data.papers.length === 0) {
+                    papersDiv.textContent = "No papers found. Ingest some papers first via the /ingest endpoint.";
+                    return;
+                }
+
+                data.papers.forEach(paper => {
+                    const card = document.createElement("div");
+                    card.className = "paper-card";
+                    card.innerHTML = `
+                        <h3>${paper.title}</h3>
+                        <p><strong>Authors:</strong> ${paper.authors}</p>
+                        <p><strong>Published:</strong> ${paper.date}</p>
+                        <a href="${paper.link}" target="_blank">Read More</a>
+                    `;
+                    papersDiv.appendChild(card);
+                });
+            } catch (err) {
+                console.error("Failed to load papers:", err);
+                document.getElementById("papers").textContent = "Error loading papers. Check console / ensure backend is running at " + BASE_URL;
+            }
+        }
+
+        loadPapers();
+    </script>
+</body>
+
+</html>

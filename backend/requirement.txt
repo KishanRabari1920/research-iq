@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpx
+feedparser
+rank-bm25
+sentence-transformers
+faiss-cpu
+requests
+langchain-text-splitters

@@ -1,0 +1,42 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== Virtual Environments =====
+venv/
+.venv/
+env/
+ENV/
+
+# ===== Environment Variables =====
+.env
+.env.local
+
+# ===== RAG Index / Generated Data =====
+backend/data/*.pkl
+backend/data/*.index
+backend/data/*.db
+!backend/data/.gitkeep
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
